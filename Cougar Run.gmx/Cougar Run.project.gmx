@@ -40,6 +40,7 @@
   <rooms name="rooms">
     <room>rooms\room1</room>
     <room>rooms\wright</room>
+    <room>rooms\bullock</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
