@@ -41,6 +41,7 @@
     <room>rooms\room1</room>
     <room>rooms\wright</room>
     <room>rooms\bullock</room>
+    <room>rooms\dana</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
