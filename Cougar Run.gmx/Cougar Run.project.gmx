@@ -43,6 +43,10 @@
     <room>rooms\bullock</room>
     <room>rooms\dana</room>
     <room>rooms\hughes</room>
+    <room>rooms\dodd</room>
+    <room>rooms\carlson_hall</room>
+    <room>rooms\dana_commons</room>
+    <room>rooms\jonas_clark</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
