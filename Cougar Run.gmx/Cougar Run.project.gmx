@@ -49,6 +49,13 @@
     <room>rooms\jonas_clark</room>
     <room>rooms\lasry</room>
     <room>rooms\little_center</room>
+    <room>rooms\maywood</room>
+    <room>rooms\blackstone</room>
+    <room>rooms\jsc</room>
+    <room>rooms\atwood_jefferson</room>
+    <room>rooms\ac</room>
+    <room>rooms\kneller</room>
+    <room>rooms\uc</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
