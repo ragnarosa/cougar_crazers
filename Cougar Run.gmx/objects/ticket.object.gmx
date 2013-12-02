@@ -11,21 +11,59 @@
     <event eventtype="4" ename="player">
       <action>
         <libid>1</libid>
-        <id>407</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_question</functionname>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>2</kind>
-            <string>Do you still want to play?</string>
+            <kind>1</kind>
+            <string>//Example script:
+show_message("what's the name of the first clark presdent?");
+var answer = get_integer("1. Brandon Guo, 2. Rehan Rasool, 3. You, 4. IDKwho","5");
+while(answer &lt;1 || answer&gt;4)
+{
+    show_message("please choose one of the options");
+    answer = get_integer("1. Brandon Guo, 2. Rehan Rasool, 3. You, 4. IDKwho","5");   
+}
+switch(answer)
+{
+    case 1:
+    {
+         //show_message( "blue")
+         //msg = show_question_async("Do you want to buy some armour for " + string(200) + "coins?");
+         show_message("The all mighty Brandon of course he's the first presdent!!! because there's no presdent there is only president");
+         //multiplier pluse .1
+         break
+    }
+    case 2:
+    {
+         show_message( "You can't be more wrong")
+         //reset multiplier
+         break
+    }
+    case 3:
+    {
+         show_message( "AWWWW how silly")
+         //reset multiplier
+         break
+    }
+    case 4:
+    {
+        show_message("try again will you?")
+        script_execute(askQuestion) 
+        //call back to the script with the ID of this question.
+        break
+    }
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -56,5 +94,8 @@
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>0,0</point>
+    <point>16,16</point>
+  </PhysicsShapePoints>
 </object>
