@@ -1,9 +1,9 @@
 cougar_crazers
 ==============
-Alex Williams
-Nikoloz Gelashvili
-Brandon Guo
-Rehan Rasool
+Alex Williams,
+Nikoloz Gelashvili,
+Brandon Guo,
+Rehan Rasool,
 Hoang Nguyen
 
 CSci 250 - Software Engineering
