@@ -121,6 +121,55 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>101</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_move</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>010101010</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>3</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>x1 = 0;
+y1 = 0;
+x2 = 0;
+y2 = 0;
+isSwipe = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -139,7 +188,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check(vk_left) {
+            <string>/*
+if keyboard_check(vk_left) {
     x-=5;
 }
 if keyboard_check(vk_right) {
@@ -151,6 +201,37 @@ if keyboard_check(vk_up) {
 if keyboard_check(vk_down) {
     y+=5;
 }
+*/
+if mouse_check_button_pressed(mb_left) {
+    isSwipe = true;
+    // store the location of the first mouse press
+    x1 = mouse_x;
+    y1 = mouse_y;        
+}
+
+if isSwipe {
+    // store the location of the mouse release
+    x2 = mouse_x;
+    y2 = mouse_y;
+    if mouse_check_button_released(mb_left) {
+        squaredDistance = (x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1);
+        distance = sqrt(squaredDistance);
+        // 32 pixel is the minimum length of a swipe
+        if (squaredDistance &gt; 32*32) {
+            isSwipe = false;
+            speed = 3;
+            sinTheta = (y2 - y1)/distance;
+            cosTheta = (x2 - x1)/distance;
+            oneOverRadicalTwo = 1/sqrt(2);
+            
+            if (sinTheta &gt; -oneOverRadicalTwo) and (sinTheta &lt; oneOverRadicalTwo) and (cosTheta &gt; 0) { direction = 0; }
+            if (sinTheta &gt; -oneOverRadicalTwo) and (sinTheta &lt; oneOverRadicalTwo) and (cosTheta &lt; 0) { direction = 180; }
+            if (cosTheta &gt; -oneOverRadicalTwo) and (cosTheta &lt; oneOverRadicalTwo) and (sinTheta &gt; 0) { direction = 270; }
+            if (cosTheta &gt; -oneOverRadicalTwo) and (cosTheta &lt; oneOverRadicalTwo) and (sinTheta &lt; 0) { direction = 90; }
+        }        
+    }
+}
+
 </string>
           </argument>
         </arguments>
@@ -373,6 +454,30 @@ if keyboard_check(vk_down) {
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>101</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_move</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>010101010</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>3</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="6" enumb="0">
       <action>
@@ -392,30 +497,6 @@ if keyboard_check(vk_down) {
           <argument>
             <kind>0</kind>
             <string>10</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>111</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move_random</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
