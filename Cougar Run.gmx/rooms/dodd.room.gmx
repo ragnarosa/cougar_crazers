@@ -1391,6 +1391,7 @@
     <instance objName="dots" x="960" y="928" name="inst_FD1E00EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dots" x="960" y="960" name="inst_D7A72D3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dots" x="928" y="960" name="inst_3753152E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="dots" x="320" y="448" name="inst_4C6BA45F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
