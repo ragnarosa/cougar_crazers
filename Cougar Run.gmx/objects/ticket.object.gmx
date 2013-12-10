@@ -62,11 +62,6 @@
             <string>//for the purpose of testing, the score variable is given a higher value each time you click.
 score = score;
 
-//asks the player for their name and stores it in a global variable to be used for later.
-global.playername = get_string("what is your playername?","Player");
-global.playerLevel = get_string("What's your level", "Level");
-//the script call below, updates the scoreboard online using the global variable defined above. 
-//the first variable is the player name which must be a string and the second is the score which must be a number
 scr_update_gmscore(global.playername,score);
 //scr_save(global.playername,global.playerLevel);
 
@@ -74,11 +69,6 @@ scr_update_gmscore(global.playername,score);
 //you will have to check online to see that your score was added.
 show_message("score_updated!");
 
-
-
-
-
-http_post_string("http://gmscoreboard.com/handle_score.php?tagid=bransaurus96p1o"+"&amp;player="+string(argument0)+"&amp;score="+string(argument1),"");
 </string>
           </argument>
         </arguments>
