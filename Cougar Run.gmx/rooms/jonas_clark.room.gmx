@@ -377,7 +377,6 @@
     <instance objName="dots" x="128" y="288" name="inst_CCD08760" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dots" x="96" y="288" name="inst_9473D105" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dots" x="64" y="288" name="inst_305B98AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="dots" x="32" y="288" name="inst_92B418A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dots" x="32" y="320" name="inst_8212D456" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dots" x="96" y="320" name="inst_62035E7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dots" x="128" y="320" name="inst_8F873F68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -2102,6 +2101,7 @@
     <instance objName="dots" x="1664" y="928" name="inst_A15EF145" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dots" x="1696" y="928" name="inst_97BC3867" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="dots" x="1728" y="928" name="inst_4D80F173" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="player" x="32" y="288" name="inst_4CB03513" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

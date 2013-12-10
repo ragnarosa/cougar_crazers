@@ -27,23 +27,7 @@
             <kind>1</kind>
             <string>ini_open("playerData.ini");
 globalvar playername, highestScore, class, stageID, stageScore, scoreMul, currentHS;
-if ( ini_key_exists( "save01", "Player" ) == false )
-{
-    global.playername = get_string("what is your playername?","Clarkie");
-    ini_write_string( "save01", "Player", global.playername);
-    global.highestScore = ini_write_real("save01","HighestScore",0);
-    global.class = ini_write_string("save01","Class","Freshman");
-    global.stageID = ini_write_real("save01","stageID",0);
-    global.stageScore = ini_write_real("save01","stageScore",0);
-    global.scoreMul = ini_write_real("save01","scoreMul",1);
-}
-global.playername = ini_read_string( "save01", "Player", "Clarkie");
-global.highestScore = ini_read_real("save01","HighestScore",0);
-global.class = ini_read_string("save01","Class","Freshman");
-global.stageID = ini_read_real("save01","stageID",0);
-global.stageScore = ini_read_real("save01","stageScore",0);
-global.scoreMul = ini_read_real("save01","scoreMul",1);
-global.currentHS = global.stageScore;
+
 ini_close();ini_open("playerData.ini");
 
 if ( ini_key_exists( "save01", "Player" ) == false )
@@ -61,9 +45,11 @@ global.highestScore = ini_read_real("save01","HighestScore",0);
 global.class = ini_read_string("save01","Class","Freshman");
 global.stageID = ini_read_real("save01","stageID",0);
 global.stageScore = ini_read_real("save01","stageScore",0);
+show_message(stageScore);
 global.scoreMul = ini_read_real("save01","scoreMul",1);
-global.currentHS = global.stageScore;
+score = global.stageScore;
 ini_close();
+
 
 switch (global.stageID) //will automatically load room depends on where the player left off last time
    {

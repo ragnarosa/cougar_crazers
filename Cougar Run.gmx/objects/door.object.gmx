@@ -27,14 +27,11 @@
             <kind>1</kind>
             <string>if(global.stageID &lt; 15)
 {
-    show_message(global.stageID);
     global.stageID++;
-    show_message(global.stageID);
 }
 else
 {
     global.stageID=0;
-    show_message(global.stageID)
 }
 
 
@@ -51,14 +48,19 @@ if ( ini_key_exists( "save01", "Player" ) == false )
 }
 
 ini_write_string( "save01", "Player", global.playername);
+
 if(global.highestScore &lt; score)
 {
     global.highestScore = score;
+    scr_update_gmscore(global.playername,score);
+    show_message("Highest Updated!"); 
 }
+stageScore = score;
 ini_write_real("save01","HighestScore",global.highestScore);
 ini_write_string("save01","Class",global.class);
 ini_write_real("save01","stageID",global.stageID);
 ini_write_real("save01","stageScore",global.stageScore);
+show_message(stageScore);
 ini_write_real("save01","scoreMul",global.scoreMul);
 
 /*
@@ -69,7 +71,6 @@ global.stageID = ini_read_real("save01","stageID",0);
 global.stageScore = ini_read_real("save01","stageScore",0);
 global.scoreMul = ini_read_real("save01","scoreMul",1);
 */
-score = global.stageScore;
 ini_close();
 
 
