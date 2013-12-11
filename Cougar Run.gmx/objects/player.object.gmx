@@ -534,6 +534,7 @@ stageScore = 0;
 ini_write_real("save01","stageScore",global.stageScore);
 scoreMul = 1;
 ini_write_real("save01","scoreMul",global.scoreMul);
+lives = 3;
 livesLeft = lives;
 ini_write_real("save01","livesLEft", livesLeft);
 

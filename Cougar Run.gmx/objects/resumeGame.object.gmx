@@ -40,6 +40,7 @@ if ( ini_key_exists( "save01", "Player" ) == false )
     global.livesLeft = ini_write_real("save01", "livesLeft",3);
     score = stageScore;
     lives = livesLeft;
+
 }
 global.playername = ini_read_string( "save01", "Player", "Clarkie");
 global.highestScore = ini_read_real("save01","HighestScore",0);
