@@ -63,14 +63,6 @@ ini_write_real("save01","stageScore",global.stageScore);
 show_message(stageScore);
 ini_write_real("save01","scoreMul",global.scoreMul);
 
-/*
-global.playername = ini_read_string( "save01", "Player", "Clarkie");
-global.highestScore = ini_read_real("save01","HighestScore",0);
-global.class = ini_read_string("save01","Class","Freshman");
-global.stageID = ini_read_real("save01","stageID",0);
-global.stageScore = ini_read_real("save01","stageScore",0);
-global.scoreMul = ini_read_real("save01","scoreMul",1);
-*/
 ini_close();
 
 
