@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.stageID &lt; 15)
+            <string>ini_open("playerData.ini");
+
+if(global.stageID &lt; 15)
 {
     global.stageID++;
 }
@@ -35,33 +37,19 @@ else
 }
 
 
-ini_open("playerData.ini");
-if ( ini_key_exists( "save01", "Player" ) == false )
-{
-    global.playername = get_string("what is your playername?","Clarkie");
-    ini_write_string( "save01", "Player", global.playername);
-    global.highestScore = ini_write_real("save01","HighestScore",0);
-    global.class = ini_write_string("save01","Class","Freshman");
-    global.stageID = ini_write_real("save01","stageID",0);
-    global.stageScore = ini_write_real("save01","stageScore",0);
-    global.scoreMul = ini_write_real("save01","scoreMul",1);
-}
-
-ini_write_string( "save01", "Player", global.playername);
-
 if(global.highestScore &lt; score)
 {
     global.highestScore = score;
-    scr_update_gmscore(global.playername,score);
-    show_message("Highest Updated!"); 
+
 }
 stageScore = score;
 ini_write_real("save01","HighestScore",global.highestScore);
 ini_write_string("save01","Class",global.class);
 ini_write_real("save01","stageID",global.stageID);
 ini_write_real("save01","stageScore",global.stageScore);
-show_message(stageScore);
 ini_write_real("save01","scoreMul",global.scoreMul);
+livesLeft = lives;
+ini_write_real("save01","livesLEft", livesLeft);
 
 ini_close();
 
