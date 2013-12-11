@@ -33,8 +33,6 @@ else
 {
     global.stageID=0;
 }
-
-
 ini_open("playerData.ini");
 if ( ini_key_exists( "save01", "Player" ) == false )
 {
@@ -45,23 +43,21 @@ if ( ini_key_exists( "save01", "Player" ) == false )
     global.stageID = ini_write_real("save01","stageID",0);
     global.stageScore = ini_write_real("save01","stageScore",0);
     global.scoreMul = ini_write_real("save01","scoreMul",1);
+    lives = ini_write_real("save01","livesLeft",3);
 }
 
-ini_write_string( "save01", "Player", global.playername);
-
-if(global.highestScore &lt; score)
-{
-    global.highestScore = score;
-    scr_update_gmscore(global.playername,score);
-    show_message("Highest Updated!"); 
-}
 stageScore = score;
-ini_write_real("save01","HighestScore",global.highestScore);
+if (highestScore &lt; stageScore)
+{
+    ini_write_real("save01","HighestScore",global.highestScore);
+}
 ini_write_string("save01","Class",global.class);
 ini_write_real("save01","stageID",global.stageID);
 ini_write_real("save01","stageScore",global.stageScore);
 show_message(stageScore);
 ini_write_real("save01","scoreMul",global.scoreMul);
+global.livesLEft = lives;
+ini_write_real("save01","livesLeft",3);
 
 ini_close();
 

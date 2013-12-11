@@ -25,10 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ini_open("playerData.ini");
-globalvar playername, highestScore, class, stageID, stageScore, scoreMul, currentHS;
+            <string>
 
-ini_close();ini_open("playerData.ini");
+ini_open("playerData.ini");
+globalvar playername, highestScore, class, stageID, stageScore, scoreMul, currentHS,livesLeft;
+
+if(lives &lt; 1)
+{
+    lives = ini_write_real("save01","livesLeft",3);
+}
 
 if ( ini_key_exists( "save01", "Player" ) == false )
 {
@@ -39,15 +44,17 @@ if ( ini_key_exists( "save01", "Player" ) == false )
     global.stageID = ini_write_real("save01","stageID",0);
     global.stageScore = ini_write_real("save01","stageScore",0);
     global.scoreMul = ini_write_real("save01","scoreMul",1);
+    lives = ini_write_real("save01","livesLeft",3);
 }
 global.playername = ini_read_string( "save01", "Player", "Clarkie");
 global.highestScore = ini_read_real("save01","HighestScore",0);
 global.class = ini_read_string("save01","Class","Freshman");
 global.stageID = ini_read_real("save01","stageID",0);
 global.stageScore = ini_read_real("save01","stageScore",0);
-show_message(stageScore);
 global.scoreMul = ini_read_real("save01","scoreMul",1);
+lives = ini_read_real("save01","livesLeft",3);
 score = global.stageScore;
+
 ini_close();
 
 
