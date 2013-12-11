@@ -35,20 +35,21 @@ if ( ini_key_exists( "save01", "Player" ) == false )
     global.highestScore = ini_write_real("save01","HighestScore",0);
     global.class = ini_write_string("save01","Class","Freshman");
     global.stageID = ini_write_real("save01","stageID",0);
-    global.stageScore = ini_write_real("save01","stageScore",0);
     global.scoreMul = ini_write_real("save01","scoreMul",1);
-    lives = ini_write_real("save01", "livesLeft",3);
+    global.stageScore = ini_write_real("save01","stageScore",0);
+    global.livesLeft = ini_write_real("save01", "livesLeft",0);
     score = stageScore;
-    
+    lives = livesLeft;
 }
 global.playername = ini_read_string( "save01", "Player", "Clarkie");
 global.highestScore = ini_read_real("save01","HighestScore",0);
 global.class = ini_read_string("save01","Class","Freshman");
 global.stageID = ini_read_real("save01","stageID",0);
-global.stageScore = ini_read_real("save01","stageScore",0);
 global.scoreMul = ini_read_real("save01","scoreMul",1);
-lives = ini_read_real("save01", "livesLeft", 3);
-score = global.stageScore;
+global.stageScore = ini_read_real("save01","stageScore",0);
+global.livesLeft = ini_read_real("save01", "livesLeft", 0);
+lives = livesLeft;
+score = stageScore;
 ini_close();
 
 switch (global.stageID) //will automatically load room depends on where the player left off last time
