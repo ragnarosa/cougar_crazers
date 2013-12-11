@@ -60,22 +60,21 @@ ini_close();
 
 switch (global.stageID) //will automatically load room depends on where the player left off last time
 {
-    case 0: room_goto(room_test); break;//only for beta
-    case 1: room_goto(wright); break;//
-    case 2: room_goto(bullock); break;//
-    case 3: room_goto(atwood_jefferson); break;
-    case 4: room_goto(jonas_clark); break;
-    case 5: room_goto(jsc); break;
-    case 6: room_goto(dodd); break;
-    case 7: room_goto(dana); break;
-    case 8: room_goto(dana_commons); break;
-    case 9: room_goto(hughes); break;
-    case 10: room_goto(blackstone); break;
-    case 11: room_goto(lasry); break;
-    case 12: room_goto(maywood); break;
-    case 13: room_goto(bp_sackler); break;
-    case 14: room_goto(little_center); break;
-    case 15: room_goto(carlson_hall); break;
+    case 0: show_message("Test Room"); room_goto(room_test); break;//only for beta
+    case 1: show_message("Wright Hall"); room_goto(wright); break;//
+    case 2: show_message("Bullock Hall"); room_goto(bullock); break;//
+    case 3: show_message("Jonas Clark Hall"); room_goto(jonas_clark); break;
+    case 4: show_message("Johnson Sanford Center"); room_goto(jsc); break;
+    case 5: show_message("Dodd Hall"); room_goto(dodd); break;
+    case 6: show_message("Dana Hall"); room_goto(dana); break;
+    case 7: show_message("Dana Commons"); room_goto(dana_commons); break;
+    case 8: show_message("Hughes Hall"); room_goto(hughes); break;
+    case 9: show_message("Blackstone Hall"); room_goto(blackstone); break;
+    case 10: show_message("Lasry Center"); room_goto(lasry); break;
+    case 11: show_message("Maywood Hall"); room_goto(maywood); break;
+    case 12: show_message("Biophysics - Sackler Science Building"); room_goto(bp_sackler); break;
+    case 13: show_message("Little Center"); room_goto(little_center); break;
+    case 14: show_message("Carlson Hall"); room_goto(carlson_hall); break;
 }
 
 </string>
