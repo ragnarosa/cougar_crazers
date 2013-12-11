@@ -377,11 +377,11 @@ if isSwipe {
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>1</string>
           </argument>
           <argument>
             <kind>4</kind>
-            <string>0</string>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -429,13 +429,26 @@ if isSwipe {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>ini_open("playerData.ini");
 if(global.highestScore &lt; score)
 {
     global.highestScore = score;
     scr_update_gmscore(global.playername,score);
+    ini_write_real("save01","HighestScore",global.highestScore);
     show_message("Highest Updated!"); 
 }
+ini_write_string("save01","Class",global.class);
+stageID=0;
+ini_write_real("save01","stageID",0);
+stageScore=0;
+ini_write_real("save01","stageScore",0);
+show_message(stageScore);
+ini_write_real("save01","scoreMul",global.scoreMul);
+lives = 3;
+ini_write_real("save01","livesLeft",3);
+ini_close();
+room_goto(room_menu);
+
 </string>
           </argument>
         </arguments>

@@ -52,7 +52,7 @@ global.class = ini_read_string("save01","Class","Freshman");
 global.stageID = ini_read_real("save01","stageID",0);
 global.stageScore = ini_read_real("save01","stageScore",0);
 global.scoreMul = ini_read_real("save01","scoreMul",1);
-lives = ini_read_real("save01","livesLeft",3);
+lives = ini_read_real("save01","livesLeft",0);
 score = global.stageScore;
 
 ini_close();

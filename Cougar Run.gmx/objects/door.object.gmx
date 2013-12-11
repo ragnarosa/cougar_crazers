@@ -56,9 +56,10 @@ ini_write_real("save01","stageID",global.stageID);
 ini_write_real("save01","stageScore",global.stageScore);
 show_message(stageScore);
 ini_write_real("save01","scoreMul",global.scoreMul);
-global.livesLEft = lives;
-ini_write_real("save01","livesLeft",3);
-
+global.livesLeft = lives;
+show_message(livesLeft);
+ini_write_real("save01","livesLeft",lives);
+show_message(livesLeft);
 ini_close();
 
 
