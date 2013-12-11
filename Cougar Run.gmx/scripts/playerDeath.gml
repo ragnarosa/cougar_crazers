@@ -5,7 +5,6 @@ if(global.highestScore < score)
     scr_update_gmscore(global.playername,score);
     show_message("score_updated!");
 }
-show_message("finally got here");
 ini_write_real("save01","HighestScore",global.highestScore);
 ini_write_string("save01","Class",global.class);
 stageID = 0;
