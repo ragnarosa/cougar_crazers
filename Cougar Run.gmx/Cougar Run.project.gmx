@@ -7,6 +7,7 @@
   <sounds name="sound">
     <sound>sound\eating</sound>
     <sound>sound\game_over</sound>
+    <sound>sound\background_music</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\player_sprite</sprite>
