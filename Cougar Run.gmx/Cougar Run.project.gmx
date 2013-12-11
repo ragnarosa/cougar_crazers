@@ -72,9 +72,7 @@
   <rooms name="rooms">
     <room>rooms\room_logo</room>
     <room>rooms\room_menu</room>
-    <room>rooms\room_test</room>
     <room>rooms\ac</room>
-    <room>rooms\atwood_jefferson</room>
     <room>rooms\blackstone</room>
     <room>rooms\bp_sackler</room>
     <room>rooms\bullock</room>
@@ -90,11 +88,11 @@
     <room>rooms\little_center</room>
     <room>rooms\maywood</room>
     <room>rooms\room_aboutUs</room>
+    <room>rooms\room_test</room>
     <room>rooms\room1</room>
     <room>rooms\room3</room>
     <room>rooms\room8</room>
     <room>rooms\test_room</room>
-    <room>rooms\uc</room>
     <room>rooms\wright</room>
   </rooms>
   <help>
