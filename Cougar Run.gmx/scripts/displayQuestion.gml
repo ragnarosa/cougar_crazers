@@ -2,9 +2,9 @@ global.paused = 1;
 enemy.speed=0;
 player.speed=0;
 
-global.menuID=questionBox_create(200,200)
+global.menuID=questionBox_create(view_xview+100,view_yview+150)
 
-if (global.stageID==0){
+//if (global.stageID==0){
 
 global.questionID = irandom_range(0, 9); 
 global.questionID = questionID+1;
@@ -21,13 +21,13 @@ questionBox_option(global.menuID,second_option);
 questionBox_option(global.menuID,third_option);
 questionBox_option(global.menuID,fourth_option);
 
-} else if (global.stageID==2){
+//} else if (global.stageID==2){
 
-} else if (global.stageID==3){
+//} else if (global.stageID==3){
 
-} else if (global.stageID==4){
+//} else if (global.stageID==4){
 
-} else {
+//} else {
 
-}
+//}
 
