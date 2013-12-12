@@ -19,3 +19,4 @@ ini_write_real("save01","livesLEft", livesLeft);
 
 ini_close();
 room_goto(room_menu);
+audio_master_gain(0)

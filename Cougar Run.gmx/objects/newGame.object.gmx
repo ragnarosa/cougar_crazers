@@ -25,26 +25,29 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ini_open("playerData.ini");
+            <string>if file_exists("playerData.ini")
+{
+    file_delete("playerData.ini");
+}
+
+ini_open("playerData.ini");
 globalvar playername, highestScore, class, stageID, stageScore, scoreMul, currentHS livesLeft;
 global.musicPlaying = 1;
 global.paused = 0;
 audio_master_gain(1)
 
-if ( ini_key_exists( "save01", "Player" ) == false )
-{
-    global.playername = get_string("what is your playername?","Clarkie");
-    ini_write_string( "save01", "Player", global.playername);
-    global.highestScore = ini_write_real("save01","HighestScore",0);
-    global.class = ini_write_string("save01","Class","Freshman");
-    global.stageID = ini_write_real("save01","stageID",0);
-    global.scoreMul = ini_write_real("save01","scoreMul",1);
-    global.stageScore = ini_write_real("save01","stageScore",0);
-    global.livesLeft = ini_write_real("save01", "livesLeft",3);
-    score = stageScore;
-    lives = livesLeft;
+global.playername = get_string("what is your playername?","Clarkie");
+ini_write_string( "save01", "Player", global.playername);
+global.highestScore = ini_write_real("save01","HighestScore",0);
+global.class = ini_write_string("save01","Class","Freshman");
+global.stageID = ini_write_real("save01","stageID",0);
+global.scoreMul = ini_write_real("save01","scoreMul",1);
+global.stageScore = ini_write_real("save01","stageScore",0);
+global.livesLeft = ini_write_real("save01", "livesLeft",3);
+score = stageScore;
+lives = livesLeft;
 
-}
+
 global.playername = ini_read_string( "save01", "Player", "Clarkie");
 global.highestScore = ini_read_real("save01","HighestScore",0);
 global.class = ini_read_string("save01","Class","Freshman");
