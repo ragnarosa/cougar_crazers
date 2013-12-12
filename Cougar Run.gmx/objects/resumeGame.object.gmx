@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>ini_open("playerData.ini");
 globalvar playername, highestScore, class, stageID, stageScore, scoreMul, currentHS livesLeft;
+global.paused = 0;
+audio_master_gain(1)
 
 if ( ini_key_exists( "save01", "Player" ) == false )
 {
