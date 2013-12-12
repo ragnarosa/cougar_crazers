@@ -2,11 +2,11 @@ global.paused = 1;
 enemy.speed=0;
 player.speed=0;
 
-global.menuID=questionBox_create(view_xview+100,view_yview+150)
+global.menuID=questionBox_create(view_xview+40,view_yview+150)
 
 //if (global.stageID==0){
 
-global.questionID = irandom_range(0, 9); 
+global.questionID = irandom_range(0, 42); 
 global.questionID = questionID+1;
 
 question = global.questions[questionID];
