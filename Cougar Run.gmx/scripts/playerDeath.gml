@@ -15,7 +15,7 @@ scoreMul = 1;
 ini_write_real("save01","scoreMul",global.scoreMul);
 lives = 3;
 livesLeft = lives;
-ini_write_real("save01","livesLEft", livesLeft);
+ini_write_real("save01","livesLeft", livesLeft);
 
 ini_close();
 room_goto(room_menu);
