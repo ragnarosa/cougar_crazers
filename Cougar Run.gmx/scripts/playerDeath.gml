@@ -3,7 +3,7 @@ if(global.highestScore < score)
 {
     global.highestScore = score;
     scr_update_gmscore(global.playername,score);
-    show_message("score_updated!");
+    show_message("You got a new high score!! #Your highest score is now " + string(score) + " points!");
 }
 ini_write_real("save01","HighestScore",global.highestScore);
 ini_write_string("save01","Class",global.class);
